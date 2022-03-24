@@ -1,0 +1,73 @@
+import { expect } from '@jest/globals'
+var exC='today|one day left|{{minus 365 count}} days left'
+var exA='no points|one point|{{count}} points'
+var exB='no {{names.many}}|one {{names.one}}|{{count}} {{names.many}}'
+// payload
+const payload = {
+    names: {
+      one: 'point',
+      many: 'points',
+    }
+  }
+  
+/*Bouns_pluralizeHowManyDays*/
+describe('Bouns_pluralizeHowManyDays',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyDays(exC,-1)).toEqual('wrong!!! minus try again ')
+
+    })
+})
+describe('Bouns',()=>{
+
+    it('',()=>{
+describe('pluralizeHowManyPoints1',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints1(exA,-1)).toEqual('wrong!!! minus try again ')
+
+    })
+})
+describe('pluralizeHowManyPoints1',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints1(exA,10)).toEqual('10 points')
+
+    })
+})
+describe('pluralizeHowManyPoints1',()=>{
+
+    it('',()=>{
+        expect(pluralizeC(exA,0)).toEqual('no points')
+
+    })
+})
+describe('pluralizeHowManyPoints1',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints1(exA,1)).toEqual('one point')
+
+    })
+})
+/*pluralizeB*/
+describe('pluralizeHowManyPoints2',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints2(exB,-1)).toEqual('wrong!!! minus try again ')
+
+    })
+})
+describe('pluralizeHowManyPoints2',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints2(exB,10)).toEqual('10 points')
+
+    })
+})
+describe('pluralizeHowManyPoints2',()=>{
+
+    it('',()=>{
+        expect(pluralizeHowManyPoints2(exB,10)).toEqual('5 points')
+
+    })
+})
